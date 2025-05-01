@@ -1,0 +1,33 @@
+{
+    "eslint.enable": true,
+    "eslint.format.enable": true,
+    "eslint.probe": [
+        "astro",
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "html",
+        "mdx",
+        "vue",
+        "markdown",
+        "json",
+        "jsonc",
+        "jsx"
+    ],
+    "eslint.run": "onSave",
+    "eslint.workingDirectories": [
+        {
+            "mode": "auto"
+        },
+        {
+            "mode": "auto",
+            "pattern": "./packages/*"
+        },
+        {
+            "mode": "auto",
+            "pattern": "./apps/*"
+        }
+    ],
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+}
