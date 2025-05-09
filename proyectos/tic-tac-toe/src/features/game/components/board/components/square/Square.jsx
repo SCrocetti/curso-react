@@ -1,10 +1,22 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import PropTypes from 'prop-types';
+import "./Square.css";
+export const Square = ({ children, isSelected, updateBoard, index }) => {
+  const className = `square ${isSelected ? 'is-selected' : ''}`
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+  const handleClick = () => {
+    updateBoard(index)
+  }
+
+  return (
+    <div onClick={handleClick} className={className}>
+      {children}
+    </div>
+  )
+}
+// ✅ Add prop types here
+Square.propTypes = {
+  children: PropTypes.node,
+  isSelected: PropTypes.bool.isRequired,
+  updateBoard: PropTypes.func.isRequired,
+  index: PropTypes.number.isRequired,
+};
