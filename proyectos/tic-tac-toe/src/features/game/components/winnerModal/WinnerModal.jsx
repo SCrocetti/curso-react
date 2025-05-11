@@ -1,4 +1,4 @@
-import { Square } from './sharedComponents/square/Square'
+import { Square } from '../sharedComponents/square/Square'
 import './WinnerModal.css'
 import PropTypes from 'prop-types'
 export function WinnerModal ({ winner, resetGame }) {

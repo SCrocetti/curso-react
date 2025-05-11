@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import Square from "./components/square/Square";
+import {Square} from "../sharedComponents/square/Square";
 import "./Board.css";
 
 export const Board = ({board,updateGame}) => {
@@ -12,7 +12,7 @@ export const Board = ({board,updateGame}) => {
               <Square
                 key={index}
                 index={index}
-                updateBoard={updateGame}
+                updateGame={updateGame}
               >
                 {square}
               </Square>
@@ -25,5 +25,5 @@ export const Board = ({board,updateGame}) => {
 // ✅ Add prop types here
 Board.propTypes = {
   board: PropTypes.arrayOf(PropTypes.string).isRequired,
-  updateBoard: PropTypes.func.isRequired,
+  updateGame: PropTypes.func.isRequired,
 };

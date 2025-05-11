@@ -2,7 +2,7 @@ import { useState } from 'react'
 import confetti from 'canvas-confetti'
 
 import { Board } from "./components/board/Board.jsx"
-import { WinnerModal } from './components/WinnerModal.jsx'
+import { WinnerModal } from './components/winnerModal/WinnerModal.jsx'
 import { TurnDisplayer } from './components/turnDisplayer/TurnDisplayer.jsx'
 import { checkWinnerFrom, checkEndGame } from './logic/board.js'
 import { TURNS } from './components/turnDisplayer/constants.js';
