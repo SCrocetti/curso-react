@@ -1,10 +1,29 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import PropTypes from 'prop-types';
+import Square from "./components/square/Square";
+import "./Board.css";
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+export const Board = ({board,updateGame}) => {
+
+  return (
+    <section className='board'>
+        {
+          board.map((square, index) => {
+            return (
+              <Square
+                key={index}
+                index={index}
+                updateBoard={updateGame}
+              >
+                {square}
+              </Square>
+            )
+          })
+        }
+      </section>
+  )
+}
+// ✅ Add prop types here
+Board.propTypes = {
+  board: PropTypes.arrayOf(PropTypes.string).isRequired,
+  updateBoard: PropTypes.func.isRequired,
+};

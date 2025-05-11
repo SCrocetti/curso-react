@@ -29,18 +29,18 @@ body {
   box-sizing: border-box;
 }
 
-.board {
+.game {
   width: fit-content;
   margin: 40px auto;
   text-align: center;
 }
 
-.board h1 {
+.game h1 {
   color: #eee;
   margin-bottom: 16px;
 }
 
-.board button {
+.game button {
   padding: 8px 12px;
   margin: 25px;
   background: transparent;
@@ -53,15 +53,9 @@ body {
   cursor: pointer;
 }
 
-.board button:hover {
+.game button:hover {
   background: #eee;
   color: #222;
-}
-
-.board .game {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
 }
 
 .turn {
