@@ -14,6 +14,10 @@ export const MouseFollower = () => {
   
       if (enabled) {
         window.addEventListener('pointermove', handleMove)
+        document.getElementById("follower").classList.remove("hidden");
+      }
+      else{
+        document.getElementById("follower").classList.add("hidden");
       }
   
       // cleanup:
@@ -41,7 +45,7 @@ export const MouseFollower = () => {
   
     return (
       <>
-        <div className="mouse-follower" style={{
+        <div id= "follower" className="mouse-follower" style={{
           transform: `translate(${position.x}px, ${position.y}px)`
         }}
         >
