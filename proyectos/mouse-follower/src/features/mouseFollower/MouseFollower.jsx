@@ -44,7 +44,8 @@ export const MouseFollower = () => {
         <div className="mouse-follower" style={{
           transform: `translate(${position.x}px, ${position.y}px)`
         }}
-        />
+        >
+        </div>
         <button onClick={() => setEnabled(!enabled)}>
           {enabled ? 'Desactivar' : 'Activar'} seguir puntero
         </button>
