@@ -16,7 +16,10 @@
     "globals": "^16.0.0"
   },
   "dependencies": {
+    "@vitejs/plugin-react": "4.4.1",
     "canvas-confetti": "^1.9.3",
-    "prop-types": "^15.8.1"
+    "prop-types": "^15.8.1",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
   }
 }
