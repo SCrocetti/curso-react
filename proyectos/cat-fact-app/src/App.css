@@ -1,0 +1,13 @@
+.cat-fact{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+.cat-image{
+    width: 300px;
+    height: 300px;
+    margin-right: 20px;
+}

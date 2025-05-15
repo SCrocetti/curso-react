@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import './App.css';
 const CAT_FACT_API_URL = 'https://catfact.ninja/fact';
 const CAT_IMAGE_API_BASE_URL = 'https://cataas.com';
 
@@ -39,9 +40,9 @@ export const App = () => {
         <main>
             <h1>Cat Fact App</h1>
             {catFact && (
-                <section>
+                <section className="cat-fact">
                     <p>{catFact}</p>
-                    {catImage && <img src={catImage} alt="Cat" />}
+                    {catImage && <img src={catImage} className="cat-image" alt="Cat image generated with the first word of the fact" />}
                 </section>
             )}
         </main>
