@@ -6,6 +6,7 @@ const CAT_IMAGE_API_BASE_URL = 'https://cataas.com';
 export const App = () => {
     const [catFact, setCatFact] = useState(null);
     const [catImage, setCatImage] = useState(null);
+    const [error, setError] = useState(null);
 
     useEffect(() =>{
         fetch(CAT_FACT_API_URL)
@@ -19,6 +20,10 @@ export const App = () => {
                 const newFact= data.fact;
                 setCatFact(newFact);
             })
+            .catch((err) => {
+                console.error(err);
+                setError(`Error fetching fact: ${err.message}`);
+            });
     },[]);
     useEffect(() => {
         if (catFact) {
@@ -34,11 +39,16 @@ export const App = () => {
                     const newImage = data.url;
                     setCatImage(newImage);
                 })
+                .catch((err) => {
+                    console.error(err);
+                    setError(`Error fetching image: ${err.message}`);
+                });
         }
     }, [catFact]);
     return (
         <main>
             <h1>Cat Fact App</h1>
+            {error && <p className="error">{error}</p>}
             {catFact && (
                 <section className="cat-fact">
                     <p>{catFact}</p>
